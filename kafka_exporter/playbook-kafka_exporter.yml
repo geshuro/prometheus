@@ -23,4 +23,4 @@
         group: root
         mode: '0755'
     - name: Ejecutar kafka_exporter
-      shell: kafka_exporter --kafka.server=localhost:9092
+      shell: kafka_exporter --kafka.server=localhost:9092 &
