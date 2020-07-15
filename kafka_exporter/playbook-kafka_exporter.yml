@@ -11,9 +11,15 @@
     - name: Descargar binario kafka_exporter
       unarchive:
         src: https://github.com/danielqsj/kafka_exporter/releases/download/v1.2.0/kafka_exporter-1.2.0.linux-amd64.tar.gz
-        dest: /bin
+        dest: /tmp
         remote_src: yes
         owner: root
         group: root
+    - name: Copiar binario
+      copy:
+        src: /tmp/kafka_exporter-1.2.0.linux-amd64/kafka_exporter
+        dest: /bin/kafka_exporter
+        owner: foo
+        group: foo
     - name: Ejecutar kafka_exporter
       shell: kafka_exporter --kafka.server=localhost:9092
