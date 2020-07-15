@@ -21,5 +21,6 @@
         dest: /bin/kafka_exporter
         owner: root
         group: root
+        mode: '0755'
     - name: Ejecutar kafka_exporter
       shell: kafka_exporter --kafka.server=localhost:9092
