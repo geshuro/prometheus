@@ -19,7 +19,7 @@
       copy:
         src: /tmp/kafka_exporter-1.2.0.linux-amd64/kafka_exporter
         dest: /bin/kafka_exporter
-        owner: foo
-        group: foo
+        owner: root
+        group: root
     - name: Ejecutar kafka_exporter
       shell: kafka_exporter --kafka.server=localhost:9092
