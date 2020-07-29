@@ -9,12 +9,11 @@ metricbeat.modules:
       - process_summary
       - uptime
       - socket_summary
-    enabled: true
+    enabled: false
     period: 10s
     processes: ['.*']
     cpu.metrics:  ["percentages","normalized_percentages"]
     core.metrics: ["percentages"]
-    enabled: false
   - module: kafka
     metricsets:
       - partition
